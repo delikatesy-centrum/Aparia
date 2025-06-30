@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8d7uu4wk1awq"]
+
+[ext_resource type="SpriteFrames" uid="uid://clw1gmty1fhty" path="res://assets/Character/idle_sprite_frames.tres" id="1_p40ab"]
+[ext_resource type="Script" uid="uid://expbantj3apk" path="res://scripts/player/controllers/input_controller.gd" id="2_6wjpx"]
+[ext_resource type="Script" uid="uid://qc0g4m6id4lk" path="res://scripts/player/controllers/state_controller.gd" id="3_vpgth"]
+[ext_resource type="Script" uid="uid://c8l0d8d80gvnn" path="res://scripts/player/controllers/texture_controller.gd" id="4_vpgth"]
+
+[node name="Player" type="Node2D"]
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+visibility_layer = 8
+sprite_frames = ExtResource("1_p40ab")
+animation = &"walk_right"
+autoplay = "idle_bot"
+frame_progress = 0.128594
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="InputController" type="Node" parent="Controllers" node_paths=PackedStringArray("state_controller")]
+script = ExtResource("2_6wjpx")
+state_controller = NodePath("../StateController")
+
+[node name="StateController" type="Node" parent="Controllers" node_paths=PackedStringArray("texture_controller")]
+script = ExtResource("3_vpgth")
+texture_controller = NodePath("../TextureController")
+
+[node name="TextureController" type="Node" parent="Controllers" node_paths=PackedStringArray("player_sprite")]
+script = ExtResource("4_vpgth")
+player_sprite = NodePath("../../PlayerSprite")
+
+[node name="States" type="Node" parent="."]
+
+[connection signal="state_changed" from="Controllers/InputController" to="Controllers/StateController" method="state_changed"]
