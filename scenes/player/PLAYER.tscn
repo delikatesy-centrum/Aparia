@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8d7uu4wk1awq"]
+[gd_scene load_steps=9 format=3 uid="uid://c8d7uu4wk1awq"]
 
 [ext_resource type="SpriteFrames" uid="uid://p3pim1yyxndi" path="res://frames/base_frames.tres" id="1_nvwoq"]
 [ext_resource type="Script" uid="uid://expbantj3apk" path="res://scripts/player/controllers/input_controller.gd" id="2_6wjpx"]
@@ -6,23 +6,36 @@
 [ext_resource type="SpriteFrames" uid="uid://bifsjmk32ttsr" path="res://frames/tools_frames.tres" id="3_66jwi"]
 [ext_resource type="Script" uid="uid://qc0g4m6id4lk" path="res://scripts/player/controllers/state_controller.gd" id="3_vpgth"]
 [ext_resource type="Script" uid="uid://c8l0d8d80gvnn" path="res://scripts/player/controllers/texture_controller.gd" id="4_vpgth"]
+[ext_resource type="Script" uid="uid://c2jggl5a2r3ah" path="res://scripts/player/controllers/movement_controller.gd" id="7_66jwi"]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvwoq"]
+size = Vector2(5, 12)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+z_index = 130
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_nvwoq")
 
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="Base" type="AnimatedSprite2D" parent="Sprites"]
 visibility_layer = 8
+texture_filter = 1
 sprite_frames = ExtResource("1_nvwoq")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="Hair" type="AnimatedSprite2D" parent="Sprites"]
+texture_filter = 1
 sprite_frames = ExtResource("2_nvwoq")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="Tools" type="AnimatedSprite2D" parent="Sprites"]
+texture_filter = 1
 sprite_frames = ExtResource("3_66jwi")
 animation = &"idle"
 autoplay = "idle"
@@ -37,12 +50,19 @@ state_controller = NodePath("../StateController")
 script = ExtResource("3_vpgth")
 texture_controller = NodePath("../TextureController")
 
-[node name="TextureController" type="Node" parent="Controllers" node_paths=PackedStringArray("base_sprite", "hair_sprite", "tools_sprite")]
+[node name="TextureController" type="Node" parent="Controllers" node_paths=PackedStringArray("base_sprite", "hair_sprite", "tools_sprite", "state_controller")]
 script = ExtResource("4_vpgth")
 base_sprite = NodePath("../../Sprites/Base")
 hair_sprite = NodePath("../../Sprites/Hair")
 tools_sprite = NodePath("../../Sprites/Tools")
+state_controller = NodePath("../StateController")
+
+[node name="MovementController" type="Node" parent="Controllers" node_paths=PackedStringArray("player", "state_controller")]
+script = ExtResource("7_66jwi")
+player = NodePath("../..")
+state_controller = NodePath("../StateController")
 
 [node name="States" type="Node" parent="."]
 
 [connection signal="state_changed" from="Controllers/InputController" to="Controllers/StateController" method="state_changed"]
+[connection signal="state_changed" from="Controllers/InputController" to="Controllers/MovementController" method="_on_state_changed"]

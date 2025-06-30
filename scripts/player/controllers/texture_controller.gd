@@ -5,6 +5,8 @@ class_name TextureController
 @export var hair_sprite : AnimatedSprite2D
 @export var tools_sprite : AnimatedSprite2D
 
+@export var state_controller : StateController
+
 
 func change_player_sprites_to(animation : String):
 	base_sprite.animation = animation
@@ -16,15 +18,15 @@ func flip_player(flipped : bool):
 	hair_sprite.flip_h = flipped
 	tools_sprite.flip_h = flipped
 
-func state_changed(new_state : Enums.State, direction : Vector2):
+func state_changed(new_state : Enums.State):
 	if new_state == Enums.State.WALKING:
 		change_player_sprites_to("walk")
 	elif new_state == Enums.State.IDLE:
 		change_player_sprites_to("idle")
 		
-	if direction.x < 0:
+	if state_controller.direction.x < 0:
 		flip_player(true)
-	elif direction.x > 0:
+	elif state_controller.direction.x > 0:
 		flip_player(false)
 		
 		

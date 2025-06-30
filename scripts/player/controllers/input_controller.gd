@@ -4,43 +4,47 @@ extends Node
 
 signal state_changed(new_state : Enums.State)
 
-var released_list = {
-	"up": true,
-	"down": true,
-	"right": true,
-	"left": true
+var pressed_list = {
+	"up": false,
+	"down": false,
+	"right": false,
+	"left": false
 }
 
 func handle_moving_input(event: InputEvent):
 	if event.is_action_pressed("go_up"):
-		released_list["up"] = false
-		state_controller.direction = Vector2.UP
+		pressed_list["up"] = true
 	elif event.is_action_pressed("go_down"):
-		released_list["down"] = false
-		state_controller.direction = Vector2.DOWN
+		pressed_list["down"] = true
 	elif event.is_action_pressed("go_right"):
-		released_list["right"] = false
-		state_controller.direction = Vector2.RIGHT
+		pressed_list["right"] = true
 	elif event.is_action_pressed("go_left"):
-		released_list["left"] = false
-		state_controller.direction = Vector2.LEFT
-		
+		pressed_list["left"] = true
 		
 		
 	if event.is_action_released("go_up"):
-		released_list["up"] = true
+		pressed_list["up"] = false
 	elif event.is_action_released("go_down"):
-		released_list["down"] = true
+		pressed_list["down"] = false
 	elif event.is_action_released("go_right"):
-		released_list["right"] = true
+		pressed_list["right"] = false
 	elif event.is_action_released("go_left"):
-		released_list["left"] = true
+		pressed_list["left"] = false
+		
+	var temp_x = 0
+	var temp_y = 0
+	if pressed_list["up"]: temp_y -= 1
+	if pressed_list["down"]: temp_y += 1
+	if pressed_list["left"]: temp_x -= 1
+	if pressed_list["right"]: temp_x += 1
+	
+	state_controller.direction = Vector2(temp_x, temp_y)
 		
 		
 	var is_idle : bool = true
-	for val in released_list.values():
-		if not val:
-			is_idle = val
+	for val in pressed_list.values():
+		if val:
+			is_idle = false
 		
 	if is_idle:
 		state_changed.emit(Enums.State.IDLE)
