@@ -1,18 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8d7uu4wk1awq"]
+[gd_scene load_steps=7 format=3 uid="uid://c8d7uu4wk1awq"]
 
-[ext_resource type="SpriteFrames" uid="uid://clw1gmty1fhty" path="res://assets/Character/idle_sprite_frames.tres" id="1_p40ab"]
+[ext_resource type="SpriteFrames" uid="uid://p3pim1yyxndi" path="res://frames/base_frames.tres" id="1_nvwoq"]
 [ext_resource type="Script" uid="uid://expbantj3apk" path="res://scripts/player/controllers/input_controller.gd" id="2_6wjpx"]
+[ext_resource type="SpriteFrames" uid="uid://bfpy0f4hu6mck" path="res://frames/bowl_hair_frames.tres" id="2_nvwoq"]
+[ext_resource type="SpriteFrames" uid="uid://bifsjmk32ttsr" path="res://frames/tools_frames.tres" id="3_66jwi"]
 [ext_resource type="Script" uid="uid://qc0g4m6id4lk" path="res://scripts/player/controllers/state_controller.gd" id="3_vpgth"]
 [ext_resource type="Script" uid="uid://c8l0d8d80gvnn" path="res://scripts/player/controllers/texture_controller.gd" id="4_vpgth"]
 
 [node name="Player" type="Node2D"]
 
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Base" type="AnimatedSprite2D" parent="Sprites"]
 visibility_layer = 8
-sprite_frames = ExtResource("1_p40ab")
-animation = &"walk_right"
-autoplay = "idle_bot"
-frame_progress = 0.128594
+sprite_frames = ExtResource("1_nvwoq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Hair" type="AnimatedSprite2D" parent="Sprites"]
+sprite_frames = ExtResource("2_nvwoq")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Tools" type="AnimatedSprite2D" parent="Sprites"]
+sprite_frames = ExtResource("3_66jwi")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Controllers" type="Node" parent="."]
 
@@ -24,9 +37,11 @@ state_controller = NodePath("../StateController")
 script = ExtResource("3_vpgth")
 texture_controller = NodePath("../TextureController")
 
-[node name="TextureController" type="Node" parent="Controllers" node_paths=PackedStringArray("player_sprite")]
+[node name="TextureController" type="Node" parent="Controllers" node_paths=PackedStringArray("base_sprite", "hair_sprite", "tools_sprite")]
 script = ExtResource("4_vpgth")
-player_sprite = NodePath("../../PlayerSprite")
+base_sprite = NodePath("../../Sprites/Base")
+hair_sprite = NodePath("../../Sprites/Hair")
+tools_sprite = NodePath("../../Sprites/Tools")
 
 [node name="States" type="Node" parent="."]
 

@@ -1,0 +1,197 @@
+﻿Diagnose log at 2025-06-30T19:51:02Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.3.2
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 19045)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\jakub
+POSH_INSTALLER=ws
+COMPUTERNAME=DESKTOP-D4OKUJP
+DriverData=C:\Windows\System32\Drivers\DriverData
+GIT_TRACE2_PARENT_SID=710c2e18-3773-4feb-8adc-0f1981dadab6
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+COLORTERM=truecolor
+SESSIONNAME=Console
+TMP=C:\Users\jakub\AppData\Local\Temp
+PROCESSOR_REVISION=5e03
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+QT_SCALE_FACTOR_ROUNDING_POLICY=RoundPreferFloor
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\jakub\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\jakub\AppData\Local
+MSYSTEM=MINGW64
+OneDrive=C:\Users\jakub\OneDrive
+ANDROID_AVD_HOME=E:\Emulator
+POSH_THEMES_PATH=C:\Users\jakub\AppData\Local\Programs\oh-my-posh\themes\
+JAVA_HOME=E:\DOWNLOAD\java\jdk-23
+USERDOMAIN=DESKTOP-D4OKUJP
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\jakub\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\AdoptOpenJDK\jdk-8.0.292.10-hotspot\bin;E:\PROGRA~2\Borland\CBUILD~1\Bin;E:\PROGRA~2\Borland\CBUILD~1\Projects\Bpl;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;H:\Download\jdk-14.0.2\bin;C:\Program Files\dotnet\;C:\xampp\mysql\bin\mysql.exe;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\xampp\php;C:\composer;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\dev\CMAKE\SetupFolder\bin;C:\Program Files\nodejs\;C:\Users\jakub\AppData\Local\Programs\oh-my-posh\bin\;E:\PROGRAMY\Python\Scripts\;E:\PROGRAMY\Python\;C:\Users\jakub\AppData\Local\Programs\Python\Launcher\;C:\Users\jakub\scoop\shims;E:\DOWNLOAD\jdk-7;C:\Users\jakub\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jakub\AppData\Roaming\Composer\vendor\bin;C:\Users\jakub\.dotnet\tools;E:\PROGRAMY\IntelliJ Idea\IntelliJ IDEA Community Edition 2023.3.3\bin;;E:\PROGRAMY\PyCharm\PyCharm Community Edition 2023.3.3\bin;;C:\Users\jakub\AppData\Local\Programs\Python\Python312;C:\Users\jakub\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\Scripts;C:\xampp\php\ext;E:\DOWNLOAD\Erlang OTP\bin;E:\ffmpeg\bin;E:\Users\jakub\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\jakub\AppData\Roaming\npm
+PROCESSOR_LEVEL=6
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+TMPDIR=C:\Users\jakub\AppData\Local\Temp
+APPDATA=C:\Users\jakub\AppData\Roaming
+PROMPT=$P$G
+ProgramFiles(x86)=C:\Program Files (x86)
+PUBLIC=C:\Users\Public
+NUMBER_OF_PROCESSORS=8
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+__PSLockDownPolicy=0
+TERM=xterm-256color
+PLINK_PROTOCOL=ssh
+ProgramData=C:\ProgramData
+MSYS=disable_pcon
+ProgramFiles=C:\Program Files (x86)
+PyCharm Community Edition=E:\PROGRAMY\PyCharm\PyCharm Community Edition 2023.3.3\bin;
+ProgramW6432=C:\Program Files
+INTEL_DEV_REDIST=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\
+HOME=C:\Users\jakub
+LC_CTYPE=C.UTF-8
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\DESKTOP-D4OKUJP
+USERPROFILE=C:\Users\jakub
+SystemRoot=C:\Windows
+IntelliJ IDEA Community Edition=E:\PROGRAMY\IntelliJ Idea\IntelliJ IDEA Community Edition 2023.3.3\bin;
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-D4OKUJP
+PROCESSOR_ARCHITEW6432=AMD64
+HOMEDRIVE=C:
+PSModulePath=C:\Users\jakub\Documents\WindowsPowerShell\Modules;
+VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\
+USERNAME=jakub
+MIC_LD_LIBRARY_PATH=C:\Program Files (x86)\Common Files\Intel\Shared Libraries\compiler\lib\mic
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\Windows\system32\cmd.exe
+SystemDrive=C:
+windir=C:\Windows
+OneDriveConsumer=C:\Users\jakub\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\jakub\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\jakub\AppData\Local\Temp\1c414f00974155468939b5c4'... OK
+Reading from temporary file 'C:\Users\jakub\AppData\Local\Temp\1c414f00974155468939b5c4'... OK
+Deleting temporary file 'C:\Users\jakub\AppData\Local\Temp\1c414f00974155468939b5c4'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\jakub
+UserDataDirectoryPath: C:\Users\jakub\.gcm
+GetCurrentDirectory(): E:\dev\gd\apiary
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:56058/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.42.0.windows.2'
+Locating current repository... OK
+Git repository at 'E:/dev/gd/apiary/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/jakub/.gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Users/jakub/.gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Users/jakub/.gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Users/jakub/.gitconfig	filter.lfs.required=true
+file:C:/Users/jakub/.gitconfig	user.name=nakub-jicz
+file:C:/Users/jakub/.gitconfig	user.email=jakub@example.com
+file:C:/Users/jakub/.gitconfig	safe.directory=E:/Program Files/GitHub/Reps/Gorph/Gorph
+file:C:/Users/jakub/.gitconfig	credential.https://git.zsz1.edu.pl.provider=generic
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.Apiaria.url=https://github.com/urmomPap/Apiaria.git
+file:.git/config	remote.Apiaria.fetch=+refs/heads/*:refs/remotes/Apiaria/*
+file:.git/config	remote.origin.url=https://github.com/delikatesy-centrum/Aparia.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.master.remote=origin
+file:.git/config	branch.master.merge=refs/heads/master
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\jakub\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\jakub\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

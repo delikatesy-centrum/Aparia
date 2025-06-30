@@ -1,33 +1,31 @@
 extends Node
 class_name TextureController
 
-@export var player_sprite : AnimatedSprite2D
+@export var base_sprite : AnimatedSprite2D
+@export var hair_sprite : AnimatedSprite2D
+@export var tools_sprite : AnimatedSprite2D
 
-@export var debug_state : Enums.State = Enums.State.IDLE
+
+func change_player_sprites_to(animation : String):
+	base_sprite.animation = animation
+	hair_sprite.animation = animation
+	tools_sprite.animation = animation
+	
+func flip_player(flipped : bool):
+	base_sprite.flip_h = flipped
+	hair_sprite.flip_h = flipped
+	tools_sprite.flip_h = flipped
 
 func state_changed(new_state : Enums.State, direction : Vector2):
-	debug_state = new_state
-	player_sprite.flip_h = false
-	if new_state == Enums.State.IDLE:
-		match direction:
-			Vector2.UP:
-				player_sprite.animation = "idle_top"
-			Vector2.DOWN:
-				player_sprite.animation = "idle_bot"
-			Vector2.RIGHT:
-				player_sprite.animation = "idle_right"
-			Vector2.LEFT:
-				player_sprite.animation = "idle_right"
-				player_sprite.flip_h = true
-	elif new_state == Enums.State.WALKING:
-		match direction:
-			Vector2.UP:
-				player_sprite.animation = "walk_top"
-			Vector2.DOWN:
-				player_sprite.animation = "walk_bot"
-			Vector2.RIGHT:
-				player_sprite.animation = "walk_right"
-			Vector2.LEFT:
-				player_sprite.animation = "walk_right"
-				player_sprite.flip_h = true
+	if new_state == Enums.State.WALKING:
+		change_player_sprites_to("walk")
+	elif new_state == Enums.State.IDLE:
+		change_player_sprites_to("idle")
+		
+	if direction.x < 0:
+		flip_player(true)
+	elif direction.x > 0:
+		flip_player(false)
+		
+		
 	pass
